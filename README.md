@@ -27,7 +27,7 @@ create a python environment with the required packages.
 If you have `conda` installed and want to create a `conda` environment, create the environment `calculator` and install all the required packages by running the command:
 
 ```
-bash setup_conda_env.sh
+source setup_conda_env.sh
 ```
 
 ## Using virtualenv and pip
