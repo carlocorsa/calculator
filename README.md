@@ -41,7 +41,7 @@ pip install virtualenv
 Then create the virtual environment `calculator` and install all the required packages by running the following command from the root directory of the repository:
 
 ```
-bash setup_virtualenv.sh
+source setup_virtualenv.sh
 ```
 
 # Testing
