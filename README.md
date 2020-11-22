@@ -32,7 +32,7 @@ source setup_conda_env.sh
 
 ## Using virtualenv and pip
 
-If `virtualenv` is not installed in your machine, install it with the command:
+You can create a virtual environment using `virtualenv`. If `virtualenv` is not installed in your machine, install it with the command:
 
 ```
 pip install virtualenv
