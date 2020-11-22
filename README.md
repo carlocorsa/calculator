@@ -24,35 +24,50 @@ create a python environment with the required packages.
 
 ## Using conda
 
-Create the environment `calculator` and install all the required packages by running the command:
+If you have `conda` installed and want to create a `conda` environment, create the environment `calculator` and install all the required packages by running the command:
 
 ```
-bash install_conda_env.sh
+bash setup_conda_env.sh
 ```
 
-## Using pip
+## Using virtualenv and pip
 
-Install the required packages using the `requirements.txt` file:
+If `virtualenv` is not installed in your machine, install it with the command:
 
 ```
-pip install -r requirements.txt
+pip install virtualenv
+```
+
+Then create the virtual environment `calculator` and install all the required packages by running the following command from the root directory of the repository:
+
+```
+bash setup_virtualenv.sh
 ```
 
 # Testing
-To test the program, run the following commands:
+If you have created the environment using either `setup_conda_env.sh` or `setup_virtualenv.sh`, the required packages for testing have already been installed in your environment. Otherwise, install them by running the following command:
+
 ```
-python -m unittest -v test_prefix_calculator.py
+pip install -r tests/requirements.txt
+``` 
+
+To test the program, run the following commands:
+
+```
+python -m unittest -v tests/test_prefix_calculator.py
 ```
 and
 ```
-python -m unittest -v test_infix_calculator.py
+python -m unittest -v tests/test_infix_calculator.py
 ```
 
 # Web application
 *Calculator* can be used as a web application.
 
 To access the application locally, run the following command:
+
 ```
 python app.py
 ```
+
 and head over http://127.0.0.1:5000/.
