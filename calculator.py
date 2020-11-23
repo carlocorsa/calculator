@@ -51,7 +51,7 @@ class PrefixOperation:
                 # Compute the operation and append the result to the operands list
                 try:
                     operands.append(ops[element](num1, num2))
-                except KeyError:
+                except (KeyError, ZeroDivisionError):
                     return
 
         if len(operands) == 1:
@@ -107,7 +107,7 @@ class InfixOperation:
                 # Compute the operation and append the result to the terms list
                 try:
                     terms.append(ops[op](num1, num2))
-                except KeyError:
+                except (KeyError, ZeroDivisionError):
                     return
 
         # Perform any outstanding operation
@@ -121,7 +121,7 @@ class InfixOperation:
 
             try:
                 terms.append(ops[op](num1, num2))
-            except KeyError:
+            except (KeyError, ZeroDivisionError):
                 return
 
         return terms.pop()

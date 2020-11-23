@@ -24,6 +24,8 @@ def evaluate_prefix():
         result = PrefixOperation(expression).evaluate_expression()
         if result is None:
             result = "Invalid expression"
+        else:
+            result = str(result)
 
         return render_template('calculator.html', title='Prefix', result=result)
 
@@ -41,6 +43,8 @@ def evaluate_infix():
         result = InfixOperation(expression).evaluate_expression()
         if result is None:
             result = "Invalid expression"
+        else:
+            result = str(result)
 
         return render_template('calculator.html', title='Infix', result=result)
 
