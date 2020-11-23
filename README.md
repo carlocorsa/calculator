@@ -44,6 +44,20 @@ Then create the virtual environment `calculator` and install all the required pa
 source setup_virtualenv.sh
 ```
 
+# Usage example
+
+Prefix and infix operations are defined in two separate classes. The code snippet below provides an example of a prefix operation:
+
+```python
+from calculator import PrefixOperation
+
+test_expression = "+ 3 4"
+
+# Create an instance of the prefix class and evaluate the expression
+prefix = PrefixOperation(test_expression)
+prefix.evaluate_expression()
+```
+
 # Testing
 If you have created the environment using either `setup_conda_env.sh` or `setup_virtualenv.sh`, the required packages for testing have already been installed in your environment. Otherwise, install them by running the following command:
 
