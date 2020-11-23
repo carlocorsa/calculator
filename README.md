@@ -55,7 +55,8 @@ test_expression = "+ 3 4"
 
 # Create an instance of the prefix class and evaluate the expression
 prefix = PrefixOperation(test_expression)
-prefix.evaluate_expression()
+result = prefix.evaluate_expression()
+print(result)
 ```
 
 # Testing
