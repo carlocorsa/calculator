@@ -12,7 +12,8 @@ The following assumptions are made:
 
 # Setup instructions
 
-*Calculator* has been built using Python 3.7.
+*Calculator* has been built using Python 3.7.  
+Please note this installation has been tested on macOS 10.14 and Ubuntu 18.04. 
 
 After cloning the repository:
 
