@@ -87,3 +87,20 @@ python app.py
 ```
 
 and head over http://127.0.0.1:5000/.
+
+# Docker
+*Calculator* can be containerised using Docker.
+
+Build a Docker image called `calculator` from the provided `Dockerfile` and tag the image with `latest`:
+```
+docker build -f Dockerfile -t calculator:latest .
+```
+
+Run a Docker container from the built `container` image:
+```
+docker run -p 5000:5000 -d calculator:latest
+```
+5000:5000 means redirecting traffic from port 5000 on all interfaces in the main network namespace to the container's port 5000 on its external interface.
+
+The app is now available at http://127.0.0.1:5000/.
+
