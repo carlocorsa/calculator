@@ -9,5 +9,5 @@ setup(
     author_email='carlo.corsaro@gmail.com',
     license='unlicensed',
     packages=['calculator'],
-    zip_safe=False
+    install_requires=['Flask']
 )
