@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% block content %}
+    <body>
+        <h1> {{ title }} </h1>
+    </body>
+    <form method=post>
+      <input type="text" name="expression" />
+      <input type="submit" value="Calculate" />
+    </form>
+    <body>
+        <h3>
+          Result:
+          {% if result %}
+          {{ result }}
+          {% endif %}
+        </h3>
+    </body>
+{% endblock content %}
+
+{% block info %}
+{% if title == "Prefix" %}
+<p class='text-muted'>In prefix notation, operators precede their operands.
+<br>Example: + 1 * 2 3 = 7
+</p>
+{% else %}
+<p class='text-muted'>In infix notation, operators are placed between operands.
+<br>Example: ( 1 + ( 2 * 3 ) ) = 7
+</p>
+{% endif %}
+<h4>Assumptions</h4>
+    <ul>
+        <li><p class='text-muted'>The calculator supports the operators {+, -, *, /} which all take exactly two args.</li></p>
+        <li><p class='text-muted'>The input literals are positive integers.</li></p>
+        <li><p class='text-muted'>Operator precedence is not handled.</li></p>
+    </ul>
+
+{% endblock info %}

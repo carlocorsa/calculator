@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+{% block content %}
+    <h1>Prefix & Infix Calculator</h1>
+
+    <div class="card w-75">
+        <div class="card-body">
+        <h5 class="card-title">Prefix calculator</h5>
+            <p class="card-text">In prefix notation, operators precede their operands.</p>
+            <a href="/prefix" class="btn btn-info">Prefix Operations</a>
+        </div>
+    </div>
+
+    <div class="card w-75">
+        <div class="card-body">
+            <h5 class="card-title">Infix calculator</h5>
+            <p class="card-text">In infix notation, operators are placed between operands.</p>
+            <a href="/infix" class="btn btn-info">Infix Operations</a>
+        </div>
+    </div>
+{% endblock content %}
+
+{% block info %}
+<p class='text-muted'>This expression calculator has been created using Python and Flask.</p>
+{% endblock info %}
